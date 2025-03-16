@@ -1,0 +1,36 @@
+﻿<Window x:Class="Lavka62.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lavka62"
+        mc:Ignorable="d"
+        Title="Menu" Height="341" Width="534" ResizeMode="NoResize" WindowStyle="None">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF10393B"/>
+            <GradientStop Color="#FF4F0F5E" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Margin="0,-31,0,0">
+        <Grid>
+            <Image Margin="171,0,0,0" Source="/159263-huawei-huawei_mate-huawei_mate_10-huawei_mate_10_pro-tsvetok-2560x1440.jpg" Height="614" VerticalAlignment="Top" HorizontalAlignment="Left" Width="799"/>
+            <Calendar HorizontalAlignment="Left" Margin="347,0,0,132" VerticalAlignment="Bottom" Background="#FFEA9FCD" Foreground="{x:Null}" Height="163" Width="177" BorderBrush="{x:Null}"/>
+            <Grid Margin="0,30,0,295" Background="#FF290303">
+                <Image  HorizontalAlignment="Left" Height="33" Margin="497,7,0,0" VerticalAlignment="Top" Width="33" MouseDown="CloseWindow" Source="/close.png"/>
+                <Image  HorizontalAlignment="Left" Height="28" Margin="464,0,0,0" VerticalAlignment="Center" Width="28" MouseDown="BaceWindow" Source="/back.png"/>
+                <Label Content="Для директора" HorizontalAlignment="Left" VerticalAlignment="Center" Width="154" Foreground="#FFEA9FCD" FontSize="18" FontFamily="MV Boli" Margin="20,0,0,0"/>
+                <ComboBox x:Name="RoleComboBox" HorizontalAlignment="Left" Margin="179,0,0,0" VerticalAlignment="Center" Width="161" Height="33" Background="#FF290303" BorderBrush="#FF290303" OpacityMask="#FF290303" SelectionChanged="RoleComboBox_SelectionChanged">
+                    <ComboBoxItem Content="База данных о клиентах" Background="#FFEA9FCD"/>
+                    <ComboBoxItem Content="База данных о работниках" Background="#FFEA9FCD"/>
+                    <ComboBoxItem Content="База данных о поставщиках" Background="#FFEA9FCD"/>
+                </ComboBox>
+            </Grid>
+            <Label Content="Какую хотите&#xD;&#xA; открыть&#xD;&#xA; базу данных" HorizontalAlignment="Left" Margin="0,67,0,0" VerticalAlignment="Top" Height="94" FontFamily="MV Boli" FontSize="18" FontWeight="Bold" FontStyle="Italic" HorizontalContentAlignment="Center" Width="171" Foreground="#FF06B7AF"/>
+            <Button x:Name="Flowers" Content="База данных цветов" HorizontalAlignment="Left" Margin="5,179,0,0" VerticalAlignment="Top" Width="161" Height="40" Background="#FF89445C" FontSize="14" FontFamily="Script MT Bold" Foreground="#FFEA9FCD" Click="Flowers_Click"/>
+            <Button x:Name="Clients" Content="База данных клиентов" HorizontalAlignment="Left" Margin="5,305,0,0" VerticalAlignment="Top" Width="161" Height="40" Background="#FF89445C" FontSize="14" FontFamily="Script MT Bold" Foreground="#FFEA9FCD" Click="Clients_Click"/>
+            <Button x:Name="Orders" Content="База данных заказов" HorizontalAlignment="Left" Margin="5,242,0,0" VerticalAlignment="Top" Width="161" Height="40" Background="#FF89445C" FontSize="14" FontFamily="Script MT Bold" Foreground="#FFEA9FCD" Click="Orders_Click"/>
+
+        </Grid>
+    </Grid>
+</Window>
